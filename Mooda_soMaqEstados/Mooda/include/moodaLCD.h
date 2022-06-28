@@ -7,6 +7,9 @@ class MoodaLCD {
   MoodaLCD();
   LiquidCrystal_I2C* lcd;
 
+  private:
+  int index;
+
 
   /************************
   init
@@ -23,6 +26,7 @@ class MoodaLCD {
     display nível da planta
     
   *************************/
+  public:
   void init(void);
   void show(int happiness, float display_luz, float display_co2, int display_agua, float display_temperatura);
   void off(void);

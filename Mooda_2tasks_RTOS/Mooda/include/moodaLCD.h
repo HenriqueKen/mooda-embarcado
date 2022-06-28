@@ -21,6 +21,7 @@ class MoodaLCD {
   saidas
     nenhuma
     display nível da planta
+    nenhuma
     
   *************************/
   void init(void);

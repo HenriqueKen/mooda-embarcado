@@ -162,12 +162,12 @@ void MoodaLCD::show(int happiness, float display_luz, float display_co2, int dis
     
 
     lcd -> createChar(0, vaso);
-    lcd -> createChar(1, &emoji[happiness][0]);
-    lcd -> createChar(2, &emoji[happiness][1]);
-    lcd -> createChar(3, &emoji[happiness][2]);
-    lcd -> createChar(4, &emoji[happiness][3]);
-    lcd -> createChar(5, &emoji[happiness][4]);
-    lcd -> createChar(6, &emoji[happiness][5]);
+    lcd -> createChar(1, &emoji[0][happiness]);
+    lcd -> createChar(2, &emoji[1][happiness]);
+    lcd -> createChar(3, &emoji[2][happiness]);
+    lcd -> createChar(4, &emoji[3][happiness]);
+    lcd -> createChar(5, &emoji[4][happiness]);
+    lcd -> createChar(6, &emoji[5][happiness]);
 
     lcd -> setCursor(1,0);
     lcd -> print(happiness);
@@ -194,14 +194,14 @@ void MoodaLCD::show(int happiness, float display_luz, float display_co2, int dis
     lcd -> write(0);
 
     lcd -> setCursor(4,0);
-    lcd -> print("Luz: "); lcd -> print(display_luz, 2); lcd -> print("lm");
+    lcd -> print("Luz: "); lcd -> print(display_luz, 2); lcd -> print(" lm");
 
     lcd -> setCursor(4,1);
-    lcd -> print("CO2: "); lcd -> print(display_co2, 2);
+    lcd -> print("CO2: "); lcd -> print(display_co2, 2); lcd -> print(" ppm");
 
     lcd -> setCursor(4,2);
-    lcd -> print("Água: "); lcd -> print(display_agua);
+    lcd -> print("Agua: "); lcd -> print(display_agua); lcd -> print(" %");
 
-    lcd -> setCursor(4,0);
-    lcd -> print("Temp: "); lcd -> print(display_temperatura, 2);
+    lcd -> setCursor(4,3);
+    lcd -> print("Temp: "); lcd -> print(display_temperatura, 2); lcd -> print(" \xDF" "C");
 }

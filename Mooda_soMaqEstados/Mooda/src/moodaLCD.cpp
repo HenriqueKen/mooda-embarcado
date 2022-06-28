@@ -49,10 +49,11 @@ saidas
 
 void MoodaLCD::show(int happiness, float display_luz, float display_co2, int display_agua, float display_temperatura)
 {
+    int index = happiness+1;
     lcd -> clear(); //limpa a tela
     lcd -> backlight(); //liga a luz de fundo 
 
-    //Cria os bytes
+     //Cria os bytes
     byte vaso[] = {
     B00100, B00101, B00111, B00100,
     B11111, B01110, B01110, B01110 };
@@ -152,25 +153,54 @@ void MoodaLCD::show(int happiness, float display_luz, float display_co2, int dis
     B00001, B00001, B00010, B01100,
     B10000, B10000, B00000, B00000 };
 
-    byte *emoji[]{
-        um_1, um_2, um_3, um_4, um_5, um_6,
-        dois_1, dois_2, dois_3, dois_4, dois_5, dois_6,
-        tres_1, tres_2, tres_3, tres_4, tres_5, tres_6,
-        quatro_1, quatro_2, quatro_3, quatro_4, quatro_5, quatro_6,
-        cinco_1, cinco_2, cinco_3, cinco_4, cinco_5, cinco_6
-    };
-    
-
     lcd -> createChar(0, vaso);
-    lcd -> createChar(1, &emoji[happiness][0]);
-    lcd -> createChar(2, &emoji[happiness][1]);
-    lcd -> createChar(3, &emoji[happiness][2]);
-    lcd -> createChar(4, &emoji[happiness][3]);
-    lcd -> createChar(5, &emoji[happiness][4]);
-    lcd -> createChar(6, &emoji[happiness][5]);
+    if (happiness == 0) index = 5;
+
+    switch(index){
+        case 1:
+            lcd -> createChar(1, um_1);
+            lcd -> createChar(2, um_2);
+            lcd -> createChar(3, um_3);
+            lcd -> createChar(4, um_4);
+            lcd -> createChar(5, um_5);
+            lcd -> createChar(6, um_6);
+            break;
+        case 2:
+            lcd -> createChar(1, dois_1);
+            lcd -> createChar(2, dois_2);
+            lcd -> createChar(3, dois_3);
+            lcd -> createChar(4, dois_4);
+            lcd -> createChar(5, dois_5);
+            lcd -> createChar(6, dois_6);
+            break;
+        case 3:
+            lcd -> createChar(1, tres_1);
+            lcd -> createChar(2, tres_2);
+            lcd -> createChar(3, tres_3);
+            lcd -> createChar(4, tres_4);
+            lcd -> createChar(5, tres_5);
+            lcd -> createChar(6, tres_6);
+            break;
+        case 4:
+            lcd -> createChar(1, quatro_1);
+            lcd -> createChar(2, quatro_2);
+            lcd -> createChar(3, quatro_3);
+            lcd -> createChar(4, quatro_4);
+            lcd -> createChar(5, quatro_5);
+            lcd -> createChar(6, quatro_6);
+            break;
+        case 5:
+            lcd -> createChar(1, cinco_1);
+            lcd -> createChar(2, cinco_2);
+            lcd -> createChar(3, cinco_3);
+            lcd -> createChar(4, cinco_4);
+            lcd -> createChar(5, cinco_5);
+            lcd -> createChar(6, cinco_6);
+            break;
+    }
 
     lcd -> setCursor(1,0);
-    lcd -> print(happiness);
+    lcd -> print(index);
 
     lcd -> setCursor(0,1);
     lcd -> write(1);
@@ -194,14 +224,14 @@ void MoodaLCD::show(int happiness, float display_luz, float display_co2, int dis
     lcd -> write(0);
 
     lcd -> setCursor(4,0);
-    lcd -> print("Luz: "); lcd -> print(display_luz, 2); lcd -> print("lm");
+    lcd -> print("Luz: "); lcd -> print(display_luz, 2); lcd -> print(" lm");
 
     lcd -> setCursor(4,1);
-    lcd -> print("CO2: "); lcd -> print(display_co2, 2);
+    lcd -> print("CO2: "); lcd -> print(display_co2, 2); lcd -> print(" ppm");
 
     lcd -> setCursor(4,2);
-    lcd -> print("Água: "); lcd -> print(display_agua);
+    lcd -> print("Agua: "); lcd -> print(display_agua); lcd -> print(" %");
 
-    lcd -> setCursor(4,0);
-    lcd -> print("Temp: "); lcd -> print(display_temperatura, 2);
+    lcd -> setCursor(4,3);
+    lcd -> print("Temp: "); lcd -> print(display_temperatura, 2); lcd -> print(" \xDF" "C");
 }

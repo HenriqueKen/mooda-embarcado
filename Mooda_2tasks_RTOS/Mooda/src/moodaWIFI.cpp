@@ -7,10 +7,10 @@
 #include "esp_wpa2.h"
 
 // #define NETWORK_TYPE 1 // Empresarial: 1; Doméstica: 0
-// #define EAP_IDENTITY "11257870@usp.br" // Somente empresarial
-// #define EAP_PASSWORD "F24s&!fV^3U5kD95" // Empresarial: senha única USP; Doméstica: senha da rede
+// #define EAP_IDENTITY "" // Somente empresarial
+// #define EAP_PASSWORD "" // Empresarial: senha única USP; Doméstica: senha da rede
 #define NETWORK_TYPE 0 // Empresarial: 1; Doméstica: 0
-#define EAP_IDENTITY "11257870@usp.br" // Somente empresarial
+#define EAP_IDENTITY "" // Somente empresarial
 #define EAP_PASSWORD "" // Empresarial: senha única USP; Doméstica: senha da rede
 #define SERVER "https://mood-a.herokuapp.com/api/sensors" // "http://192.168.0.52:3001/api/sensors";
 
