@@ -19,7 +19,7 @@
 
 <p align="center">
   <a href="#-sobre">📚 Sobre</a> |
-    <a href="#-versões">⌛ Sobre</a>
+    <a href="#-versões">⌛ Versões</a>
 </p>
 
 <p align="center">
