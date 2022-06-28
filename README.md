@@ -44,5 +44,7 @@ Nesse repositório, encontram-se as particularidades do sistema embarcado.
 Durante a execução do projeto foram desenvolvidas diversas versões do código com e sem RTOS, em vias de testar suas aplicações e funcionalidades. Estas versões podem ser conferidas dentro da paste "other_versions".
 
 `Mooda_1task_RTOS`: Versão da Mooda configurada com RTOS e apenas uma task.
+
 `Mooda_2task_RTOS`: Versão da Mooda configurada com RTOS, duas tasks e XSemaphore.
+
 `Mooda_StateMachine`: Versão da Mooda configurada sem RTOS, utilizando a função *millis()* e modelo de máquina de estados.
