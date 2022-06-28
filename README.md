@@ -40,6 +40,16 @@ A Mooda é um sistema de monitoramento composto por duas partes:
 
 Nesse repositório, encontram-se as particularidades do sistema embarcado.
 
+## 🚢 Embarcado
+
+<p align="center">
+   Abaixo é possível conferir o sistema embarcado em uma <i>Echeveria pulidonis</i>.
+</p>
+
+<p align="center">
+   <img src="https://i.ibb.co/pL2cDT9/plant.jpg" alt="plant" width="400px" />
+</p>
+ 
 ## ⌛ Versões
 
 Durante a execução do projeto foram desenvolvidas diversas versões do código com e sem RTOS, em vias de testar suas aplicações e funcionalidades. Estas versões podem ser conferidas dentro da pasta `other_versions`.
