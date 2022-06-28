@@ -19,7 +19,8 @@
 
 <p align="center">
   <a href="#-sobre">📚 Sobre</a> |
-    <a href="#-versões">⌛ Versões</a>
+  <a href="#-versões">🚢 Embarcado</a> |
+  <a href="#-versões">⌛ Versões</a>
 </p>
 
 <p align="center">
@@ -43,7 +44,7 @@ Nesse repositório, encontram-se as particularidades do sistema embarcado.
 ## 🚢 Embarcado
 
 <p align="center">
-   Abaixo é possível conferir o sistema embarcado em uma <i>Echeveria pulidonis</i>.
+   Abaixo, o sistema embarcado em uma <i>Echeveria pulidonis</i>.
 </p>
 
 <p align="center">
