@@ -18,7 +18,8 @@
 ***
 
 <p align="center">
-  <a href="#-sobre">📚 Sobre</a>
+  <a href="#-sobre">📚 Sobre</a> |
+    <a href="#-versões">⌛ Sobre</a>
 </p>
 
 <p align="center">
@@ -41,7 +42,7 @@ Nesse repositório, encontram-se as particularidades do sistema embarcado.
 
 ## ⌛ Versões
 
-Durante a execução do projeto foram desenvolvidas diversas versões do código com e sem RTOS, em vias de testar suas aplicações e funcionalidades. Estas versões podem ser conferidas dentro da paste "other_versions".
+Durante a execução do projeto foram desenvolvidas diversas versões do código com e sem RTOS, em vias de testar suas aplicações e funcionalidades. Estas versões podem ser conferidas dentro da pasta `other_versions`.
 
 `Mooda_1task_RTOS`: Versão da Mooda configurada com RTOS e apenas uma task.
 
